@@ -10,8 +10,6 @@ let outIputValue = document.querySelector('#name-output');
 // console.log(outputValue.textContent);
 
 const callback = (   { currentTarget: { value } } ) => {
-    console.dir(event);
-    console.log(value, value.length);
        value.length
            ? (outIputValue.textContent = value)
            : (outIputValue.textContent = 'Anonymous');

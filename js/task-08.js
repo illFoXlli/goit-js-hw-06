@@ -23,8 +23,8 @@ let inputEmail = document.querySelector("[type = 'email']");
 let inputPassword = document.querySelector("[type = 'password']");
 let btn = document.querySelector("[type = 'submit']");
 console.log(form);
-// что тут не правельно и как правельно диструкту... ????
-form.addEventListener('submit', (event) => {
+// что тут не правельно и как правельно диструкту... ???? Нужно уточнить!!!!!
+form.addEventListener('submit', event => {
     event.preventDefault();
     // console.dir(event);
     // const { elements: { email, password } } = event.currentTarget
@@ -34,14 +34,15 @@ form.addEventListener('submit', (event) => {
     // const {
     //     elements: { input1:{email}, input2:{password}, },
     // } = event.currentTarget;
-    const obj = {
-        email: inputEmail.value,
-        password: inputPassword.value,
-    };
 
-    console.log(obj);
+   
     if (inputEmail.value === '' || inputPassword.value === '') {
         return alert('Введите что-нибудь... умное :)');
+    } else {
+        const obj = {
+            email: inputEmail.value,
+            password: inputPassword.value,
+        };
     }
     event.target.reset();
 });

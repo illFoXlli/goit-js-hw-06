@@ -8,3 +8,5 @@ classItem.forEach(item => {
   const listLength = item.lastElementChild.children.length;
   console.log('Category: ' + nameTitle + '\n' + 'Elements: ' + listLength);
 });
+
+console.log(classItem.lastElementChild.children);;

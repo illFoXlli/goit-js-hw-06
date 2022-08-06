@@ -27,16 +27,16 @@ let destroyInput = document.querySelector('[data-destroy]');
 let input = document.querySelector('[type="number"]');
 let box = document.querySelector('#boxes');
 
-
-
-
-// мжно ли в foo сделать диструктуризацию
-// как лучше должно быть
 const handleProductionSquareClick = () => {
+    box.innerHTML = '';
     let number = input.value;
     let array = [];
     for (let i = 1; i <= number; i++) {
         const divItem = document.createElement('div');
+        const text = document.createElement("p")
+        text.textContent = "кубяка"
+        text.style.fontSize = i * 4 + 1 + "px";
+        divItem.append(text);
         divItem.style.width = i * 10 + 20 + 'px';
         divItem.style.height = i * 10 + 20 + 'px';
         divItem.style.backgroundColor = getRandomHexColor();
@@ -45,7 +45,6 @@ const handleProductionSquareClick = () => {
     box.append(...array);
 };
 
+
 createInput.addEventListener('click', handleProductionSquareClick);
-destroyInput.addEventListener('click', () => {
-    box.innerHTML = '';
-});
+destroyInput.addEventListener('click', () => { box.innerHTML = '';});

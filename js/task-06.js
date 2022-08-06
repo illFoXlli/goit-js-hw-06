@@ -22,15 +22,22 @@
 //   border-color: #f44336;
 // }
 let inputValue = document.querySelector('#validation-input');
-inputValue.addEventListener("blur", () => { 
-    if(inputValue.value.length ===
-        +inputValue.getAttribute("data-length")) {
-        inputValue.classList.add('valid');
-         inputValue.classList.remove('invalid');
+inputValue.addEventListener('blur', () => {
+    console.log(inputValue.value.length);
+
+    if (inputValue.value.length === +inputValue.getAttribute('data-length')) {
+          inputValue.classList.add('valid');
+          inputValue.classList.remove('invalid');
     }
-    else {
+    if (inputValue.value.length !== +inputValue.getAttribute('data-length')) {
         inputValue.classList.add('invalid');
         inputValue.classList.remove('valid');
     }
-  
-})
+    if (inputValue.value.length === 0) {
+         inputValue.classList.remove('valid');
+         inputValue.classList.remove('invalid');
+
+    }
+         
+    
+});
