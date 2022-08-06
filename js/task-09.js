@@ -21,11 +21,11 @@ function getRandomHexColor() {
     return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-function replaceBackground() {
+function handleReplaceBackgroundClick() {
     body.style.backgroundColor = getRandomHexColor();
     bgColor.textContent = getRandomHexColor();
 
     console.log('click');
 }
 
-btn.addEventListener('click', replaceBackground);
+btn.addEventListener('click', handleReplaceBackgroundClick);

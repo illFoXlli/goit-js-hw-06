@@ -23,12 +23,12 @@ let inputEmail = document.querySelector("[type = 'email']");
 let inputPassword = document.querySelector("[type = 'password']");
 let btn = document.querySelector("[type = 'submit']");
 console.log(form);
-// что тут не правельно и как правельно дистр... 22 - 23 строка
-
+// что тут не правельно и как правельно диструкту... ????
 form.addEventListener('submit', (event) => {
     event.preventDefault();
     // console.dir(event);
-    // console.log({ currentTarget: { 0: {} } });
+    // const { elements: { email, password } } = event.currentTarget
+    // console.log( email, password );
     // console.log({ currentTarget: { 0: { input: { value } } } } );
     // console.log();
     // const {

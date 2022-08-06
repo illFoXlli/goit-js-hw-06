@@ -6,10 +6,10 @@
 // <span id="text">Abracadabra!</span>
 
 let inputCheckout = document.querySelector('#font-size-control');
-let text = document.querySelector("#text")
+let textSpan = document.querySelector("#text")
 
 inputCheckout.addEventListener('change', ({ target: { value } })=> {
-    text.style.fontSize=`${value}px`;
+    textSpan.style.fontSize=`${value}px`;
 
 }) 
 

@@ -5,7 +5,7 @@
 
 
 let inputValue = document.querySelector('#name-input');
-let outputValue = document.querySelector('#name-output');
+let outIputValue = document.querySelector('#name-output');
 
 // console.log(outputValue.textContent);
 
@@ -13,8 +13,8 @@ const callback = (   { currentTarget: { value } } ) => {
     console.dir(event);
     console.log(value, value.length);
        value.length
-           ? (outputValue.textContent = value)
-           : (outputValue.textContent = 'Anonymous');
+           ? (outIputValue.textContent = value)
+           : (outIputValue.textContent = 'Anonymous');
   
 }
 

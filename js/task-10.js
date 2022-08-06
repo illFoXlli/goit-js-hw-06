@@ -23,7 +23,7 @@ function getRandomHexColor() {
 }
 
 let createInput = document.querySelector('[data-create]');
-let DestroyInput = document.querySelector('[data-destroy]');
+let destroyInput = document.querySelector('[data-destroy]');
 let input = document.querySelector('[type="number"]');
 let box = document.querySelector('#boxes');
 
@@ -32,7 +32,7 @@ let box = document.querySelector('#boxes');
 
 // мжно ли в foo сделать диструктуризацию
 // как лучше должно быть
-const foo = () => {
+const handleProductionSquareClick = () => {
     let number = input.value;
     let array = [];
     for (let i = 1; i <= number; i++) {
@@ -45,7 +45,7 @@ const foo = () => {
     box.append(...array);
 };
 
-createInput.addEventListener('click', foo);
-DestroyInput.addEventListener('click', () => {
+createInput.addEventListener('click', handleProductionSquareClick);
+destroyInput.addEventListener('click', () => {
     box.innerHTML = '';
 });
