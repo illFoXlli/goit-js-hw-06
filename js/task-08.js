@@ -26,8 +26,13 @@ console.log(form);
 // что тут не правельно и как правельно диструкту... ???? Нужно уточнить!!!!!
 form.addEventListener('submit', event => {
     event.preventDefault();
+    console.log(event);
     // console.dir(event);
     // const { elements: { email, password } } = event.currentTarget
+    // const {
+    //     elements: { email, password },
+    // } = event.currentTarget;
+
     // console.log( email, password );
     // console.log({ currentTarget: { 0: { input: { value } } } } );
     // console.log();
